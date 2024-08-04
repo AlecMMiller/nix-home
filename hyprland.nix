@@ -34,6 +34,7 @@
       exec-once = [
         "waybar"
         "discord"
+        "lxqt-policykit-agent"
       ];
 
       windowrulev2 = [
