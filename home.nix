@@ -32,6 +32,7 @@ in
     spotify
     discord
     blender
+    playerctl
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji

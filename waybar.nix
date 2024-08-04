@@ -9,21 +9,25 @@
         output = ["DP-2"];
         layer = "top";
         position = "top";
+        modules-left = ["mpris"];
         modules-center = ["hyprland/workspaces"];
         modules-right = ["pulseaudio" "clock"];
         clock.format = "{:%H:%M}";
+        mpris = {
+          format = "{artist} - {title}";
+        };
         "hyprland/workspaces" = {
           all-outputs = true;
           format = "{icon}";
-	  format-icons = {
+	        format-icons = {
             "1" = "";
-	    "2" = "";
+	          "2" = "";
             "3" = "";
-	    "4" = "";
+	          "4" = "";
             "7" = "";
-	    "8" = "󰝚";
-	    "9" = "󰍡";
-	  };
+	          "8" = "󰝚";
+	          "9" = "󰍡";
+	        };
         };
       };
     };
@@ -80,6 +84,16 @@
       }
       #pulseaudio {
         padding-left: 12px;
+      }
+      #mpris {
+        color: @text;
+        background-color: @base;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-radius: 20px;
+        margin-left: 8px;
       }
       #clock {
         color: @text;
