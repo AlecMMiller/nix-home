@@ -27,11 +27,20 @@ in
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
-    pkgs.spotify
-    pkgs.discord
-    pkgs.blender
+  home.packages = with pkgs; 
+  [
+    spotify
+    discord
+    blender
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    fira-code
+    fira-code-symbols
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
+
+  fonts.fontconfig.enable = true;
 
   xdg.enable = true;
 
