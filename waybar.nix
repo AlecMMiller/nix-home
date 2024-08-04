@@ -14,7 +14,16 @@
         clock.format = "{:%H:%M}";
         "hyprland/workspaces" = {
           all-outputs = true;
-          format = "{name}";
+          format = "{icon}";
+	  format-icons = {
+            "1" = "";
+	    "2" = "";
+            "3" = "";
+	    "4" = "";
+            "7" = "";
+	    "8" = "󰝚";
+	    "9" = "󰍡";
+	  };
         };
       };
     };
