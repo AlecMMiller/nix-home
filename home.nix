@@ -32,6 +32,7 @@ in
     spotify
     discord
     blender
+    pavucontrol
     playerctl
     noto-fonts
     noto-fonts-cjk
@@ -62,6 +63,7 @@ in
     ./kitty.nix
     ./git.nix
     ./neovim.nix
+    ./gtk.nix
   ];
 
   #home-manager.enable = true;

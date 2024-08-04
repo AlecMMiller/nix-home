@@ -40,6 +40,7 @@
         "immediate,class:^(google-chrome)$"
         "workspace 9 silent,class:^(discord)$"
         "workspace 8,initialTitle:^(Spotify)"
+        "float,class:^(org.pulseaudio.pavucontrol)$"
       ];
 
       "$mod" = "SUPER";

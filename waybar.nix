@@ -16,6 +16,9 @@
         mpris = {
           format = "{artist} - {title}";
         };
+        pulseaudio = {
+          on-click = "pavucontrol";
+        };
         "hyprland/workspaces" = {
           all-outputs = true;
           format = "{icon}";
