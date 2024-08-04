@@ -66,6 +66,7 @@ in
     ./git.nix
     ./neovim.nix
     ./gtk.nix
+    ./mako.nix
   ];
 
   #home-manager.enable = true;
