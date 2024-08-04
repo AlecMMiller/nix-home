@@ -39,6 +39,8 @@ in
     noto-fonts-emoji
     fira-code
     fira-code-symbols
+    grim
+    slurp
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 

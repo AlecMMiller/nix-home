@@ -17,6 +17,7 @@
         "$mod, C, killactive"
         "$mod, M, exit"
         "$mod, R, exec, $launcher"
+        '',Print, exec, grim -g "$(slurp)"''
       ]
       );
 
