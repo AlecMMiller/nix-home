@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 let
   sources = import ./npins;
 in
@@ -52,7 +52,7 @@ in
     enable = true;
     bashrcExtra = ''
       alias nix-re='sudo nixos-rebuild switch --flake /etc/nixos#default'
-      alias home-re='home-manager switch'
+      alias home-re='home-manager switch --impure'
     '';
   };
 
@@ -67,6 +67,7 @@ in
     ./neovim.nix
     ./gtk.nix
     ./mako.nix
+    ./firefox.nix
   ];
 
   #home-manager.enable = true;
