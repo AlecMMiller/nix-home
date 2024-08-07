@@ -45,6 +45,25 @@
         "lxqt-policykit-agent"
       ];
 
+      decoration = {
+        rounding = 2;
+        drop_shadow = true;
+        shadow_range = 4;
+        shadow_render_power = 3;
+    
+        blur = {
+          enabled = true;
+          size = 3;
+          passes = 1;
+
+          vibrancy = 0.1696;
+        };
+      };
+
+      dwindle = {
+        no_gaps_when_only = 1;
+      };
+
       windowrulev2 = [
         "suppressevent maximize, class:.*"
         "immediate,class:^(google-chrome)$"
@@ -54,6 +73,11 @@
       ];
 
       "$mod" = "SUPER";
+
+      misc = {
+        force_default_wallpaper = 0;
+        disable_hyprland_logo = true;
+      };
     };
   };
 }
