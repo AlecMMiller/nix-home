@@ -68,6 +68,8 @@ in
     ./gtk.nix
     ./mako.nix
     ./firefox.nix
+    ./fish.nix
+    ./starship.nix
   ];
 
   #home-manager.enable = true;
