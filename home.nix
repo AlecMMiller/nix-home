@@ -60,6 +60,7 @@ in
     (sources.catppuccin + "/modules/home-manager")
     ./waybar.nix
     ./hyprland.nix
+    ./eza.nix
     ./hyprpaper.nix
     ./tofi.nix
     ./kitty.nix
@@ -67,9 +68,12 @@ in
     ./neovim.nix
     ./gtk.nix
     ./mako.nix
+    ./bat.nix
     ./firefox.nix
     ./fish.nix
+    ./fzf.nix
     ./starship.nix
+    ./tmux.nix
   ];
 
   #home-manager.enable = true;
