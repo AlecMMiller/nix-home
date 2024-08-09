@@ -34,6 +34,7 @@ in
     blender
     pavucontrol
     playerctl
+    davinci-resolve
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
