@@ -69,6 +69,7 @@ in
     ./gtk.nix
     ./mako.nix
     ./bat.nix
+    ./fcitx5.nix
     ./firefox.nix
     ./fish.nix
     ./fzf.nix
