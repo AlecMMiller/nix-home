@@ -28,7 +28,41 @@
         "browser.urlbar.suggest.addons" = false;
         "browser.urlbar.suggest.topsites" = false;
         "browser.urlbar.suggest.yelp" = false;
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
+
+      userChrome = ''
+        #tabbrowser-tabs {
+          --user-tab-rounding: 8px;
+        }
+
+        .tab-background {
+          border-radius: var(--user-tab-rounding) var(--user-tab-rounding) 0px 0px !important;
+          margin-block: 1px 0 !important;
+        }
+
+        #scrollbutton-up, #scrollbutton-down {
+          border-top-width: 1px !important;
+          border-bottom-width: 0 !important;
+        }
+
+        #urlbar:not([open=""])>#urlbar-background {
+          border-radius: 50px !important;
+        }
+
+        #customizableui-special-spring1, #customizableui-special-spring2 {
+          min-width: 0 !important;
+          max-width: 0 !important;
+        }
+
+        :root {
+          --accent: #cba6f7;
+          --base: #1e1e2e;
+          --text: #cdd6f4;
+
+          --toolbar-bgcolor: var(--base) !important;
+        }
+      '';
     };
   };
 }
