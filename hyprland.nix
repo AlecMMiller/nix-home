@@ -40,8 +40,10 @@
       ];
 
       exec-once = [
+        "[workspace 1] firefox"
         "waybar"
-        "discord"
+        "[workspace 9] discord"
+        "[workspace 8 silent] spotify"
         "lxqt-policykit-agent"
       ];
 
@@ -66,9 +68,6 @@
 
       windowrulev2 = [
         "suppressevent maximize, class:.*"
-        "immediate,class:^(google-chrome)$"
-        "workspace 9 silent,class:^(discord)$"
-        "workspace 8,initialTitle:^(Spotify)"
         "float,class:^(org.pulseaudio.pavucontrol)$"
       ];
 
