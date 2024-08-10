@@ -56,11 +56,33 @@
         }
 
         :root {
-          --accent: #cba6f7;
+          --accent: #b4befe;
+          --surface1: #45475a;
           --base: #1e1e2e;
+          --mantle: #181825;
+          --crust: #11111b;
           --text: #cdd6f4;
 
-          --toolbar-bgcolor: var(--base) !important;
+          --toolbar: var(--base);
+          --url-bar: var(--mantle);
+
+          --toolbar-bgcolor: var(--toolbar) !important;
+
+          --tab-selected-bgcolor: var(--base) !important;
+
+          --toolbarbutton-icon-fill: var(--accent) !important;
+
+          --toolbar-field-focus-border-color: var(--accent) !important;
+
+          --toolbar-field-border-color: var(--url-bar) !important;
+          --toolbar-field-background-color: var(--url-bar) !important;
+          --toolbar-field-focus-background-color: var(--url-bar) !important;
+          --toolbar-field-color: var(--text) !important;
+
+          --tabs-navbar-separator-color: var(--url-bar) !important;
+          --panel-separator-color: var(--surface1) !important;
+
+          --chrome-content-separator-color: var(--url-bar) !important;
         }
       '';
     };
