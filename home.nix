@@ -70,6 +70,7 @@ in
     ./gtk.nix
     ./mako.nix
     ./bat.nix
+    ./direnv.nix
     ./fcitx5.nix
     ./firefox.nix
     ./fish.nix
