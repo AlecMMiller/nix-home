@@ -33,12 +33,17 @@
 
       userChrome = ''
         #tabbrowser-tabs {
-          --user-tab-rounding: 8px;
+          --user-tab-rounding: 12px;
         }
 
         .tab-background {
           border-radius: var(--user-tab-rounding) var(--user-tab-rounding) 0px 0px !important;
           margin-block: 1px 0 !important;
+          background-color: var(--mantle) !important;
+        }
+
+        .tab-background[selected=""] {
+          background-color: var(--base) !important;
         }
 
         #scrollbutton-up, #scrollbutton-down {
@@ -79,10 +84,18 @@
           --toolbar-field-focus-background-color: var(--url-bar) !important;
           --toolbar-field-color: var(--text) !important;
 
-          --tabs-navbar-separator-color: var(--url-bar) !important;
+          --tabs-navbar-separator-color: var(--toolbar) !important;
           --panel-separator-color: var(--surface1) !important;
 
-          --chrome-content-separator-color: var(--url-bar) !important;
+          --chrome-content-separator-color: var(--toolbar) !important;
+        }
+
+        #navigator-toolbox {
+          background-color: var(--crust) !important;
+        }
+
+        #tabbrowser-tabs {
+          border-inline-color: var(--crust) !important;
         }
       '';
     };
