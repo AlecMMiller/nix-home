@@ -18,10 +18,10 @@
     homeConfigurations = {
       "alec@kami" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
-	extraSpecialArgs = {inherit inputs outputs;};
-	modules = [
-	/home/alec/.config/home-manager/home.nix
-	];
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+          /home/alec/.config/home-manager/home.nix
+        ];
       };
     };
   };
