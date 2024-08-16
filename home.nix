@@ -29,6 +29,7 @@ in
   # environment.
   home.packages = with pkgs; 
   [
+    usbutils
     spotify
     discord
     blender

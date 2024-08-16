@@ -13,10 +13,14 @@
       "$mod, ${x}, workspace, ${x}"
       "$mod SHIFT, ${x}, movetoWorkspace, ${x}"
       ]) ["1" "2" "3" "4" "5" "6" "7" "8" "9"] ++ [
-        "$mod, Q, exec, $terminal"
+        "$mod, A, exec, $terminal"
         "$mod, C, killactive"
         "$mod, M, exit"
-        "$mod, R, exec, $launcher"
+        "$mod, S, exec, $launcher"
+        "$mod, H, movefocus, l" 
+        "$mod, J, movefocus, d"
+        "$mod, K, movefocus, u"
+        "$mod, L, movefocus, r"
         '',Print, exec, grim -g "$(slurp)"''
       ]
       );
@@ -31,6 +35,7 @@
 
       general = {
         allow_tearing = true;
+        gaps_out = 10;
       };
 
       monitor = [
@@ -55,15 +60,11 @@
     
         blur = {
           enabled = true;
-          size = 3;
+          size = 8;
           passes = 1;
 
           vibrancy = 0.1696;
         };
-      };
-
-      dwindle = {
-        no_gaps_when_only = 1;
       };
 
       windowrulev2 = [

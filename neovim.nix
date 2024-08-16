@@ -7,7 +7,9 @@
     extraConfig = ''
       let mapleader = ' '
       set number relativenumber
-    '';
+      hi Normal ctermbg=None
+      hi Normal guibg=None
+      '';
 
     plugins = with pkgs.vimPlugins; [
       rust-vim
