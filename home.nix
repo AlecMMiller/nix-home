@@ -44,6 +44,9 @@ in
     grim
     slurp
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    prismlauncher
+    jdk8
+    virt-manager
   ];
 
   fonts.fontconfig.enable = true;
