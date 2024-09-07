@@ -71,6 +71,7 @@ in
   imports = [
     (sources.catppuccin + "/modules/home-manager")
     ./waybar.nix
+    ./ripgrep.nix
     ./hyprland.nix
     ./eza.nix
     ./hyprpaper.nix
