@@ -7,6 +7,7 @@
     userName = "Alec Miller";
     extraConfig = {
       push = { autoSetupRemote = true; };
+      pull = { rebase = false; };
     };
   };
 }
