@@ -36,6 +36,8 @@ in
   # environment.
   home.packages = with pkgs; 
   [
+    nixd
+    vscode-langservers-extracted
     usbutils
     spotify
     discord
