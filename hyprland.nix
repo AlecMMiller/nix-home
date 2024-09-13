@@ -1,4 +1,5 @@
-{ config, ... }:
+{ config, lib, ... }:
+with lib;
 let
 monitor = if config.bundles.desktop then [
   "HDMI-A-1,preferred,0x0,1"
@@ -36,11 +37,13 @@ in
             );
 
         env = [
-          "NVD_BACKEND,direct"
-            "LIBVA_DRIVER_NAME,nvidia"
-            "XDG_SESSION_TYPE,wayland"
-            "GBM_BACKEND,nvidia-drm"
-            "__GLX_VENDOR_LIBRARY,nvidia"
+          "XDG_SESSION_TYPE,wayland"
+        ] ++ lists.optionals config.bundles.desktop [
+        "NVD_BACKEND,direct"
+          "ELECTRON_OZONE_PLATFORM_HINT,auto"
+          "LIBVA_DRIVER_NAME,nvidia"
+          "GRM_BACKEND,nvidia-drm"
+          "__GLX_VENDOR_LIBRARY,nvidia"
         ];
 
         general = {
