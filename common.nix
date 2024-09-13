@@ -1,12 +1,11 @@
 { pkgs, lib, config, ... }:
-with lib;
 let
 sources = import ./npins;
 in
 {
-    imports = [
-      (sources.catppuccin + "/modules/home-manager")
-    ];
+  imports = [
+    (sources.catppuccin + "/modules/home-manager")
+  ];
 
 
   config = {
@@ -56,8 +55,12 @@ in
         grim
         slurp
         (nerdfonts.override { fonts = [ "FiraCode" ]; })
-        virt-manager
-        ] ++ lib.optionals config.bundles.desktop [ "davinci-resolve" "prismlauncher" "jdk8" ];
+    ] ++ lib.optionals config.bundles.desktop [ 
+    davinci-resolve
+    prismlauncher
+    jdk8
+    virt-manager
+    ];
 
     fonts.fontconfig.enable = true;
 

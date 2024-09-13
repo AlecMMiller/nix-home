@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ ... }:
 
 {
   programs.waybar = {
@@ -6,7 +6,7 @@
 
     settings = {
       mainBar = {
-        output = ["DP-2"];
+        output = ["DP-2" "eDP-1"];
         layer = "top";
         position = "top";
         modules-left = ["mpris"];
