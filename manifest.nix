@@ -23,7 +23,9 @@ with lib;
     ./fzf.nix
     ./git.nix
     ./gtk.nix
+    ./hypridle.nix
     ./hyprland.nix
+    ./hyprlock.nix
     ./hyprpaper.nix
     ./kitty.nix
     ./mako.nix
