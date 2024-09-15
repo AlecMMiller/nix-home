@@ -54,9 +54,9 @@ in
         monitor = monitor;
 
         exec-once = [
-          "[workspace 1] firefox"
+          "[workspace 1 silent] firefox"
             "waybar"
-            "[workspace 9] discord"
+            "[workspace 9 silent] discord"
             "[workspace 8 silent] spotify"
             "lxqt-policykit-agent"
         ];
