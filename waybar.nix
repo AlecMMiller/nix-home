@@ -1,6 +1,6 @@
 { config, ... }:
 let
-  primary_monitor = if config.bundles.desktop then "DP-2" else "eDP-1";
+primary_monitor = if config.bundles.desktop then "DP-2" else "eDP-1";
 in
 {
   config = {
@@ -12,15 +12,36 @@ in
           output = [primary_monitor];
           layer = "top";
           position = "top";
-          modules-left = ["mpris"];
-          modules-center = ["hyprland/workspaces"];
-          modules-right = ["pulseaudio" "clock"];
-          clock.format = "{:%H:%M}";
+          modules-left = ["hyprland/workspaces"];
+          #modules-center = ["hyprland/workspaces"];
+          modules-right = ["network" "battery" "pulseaudio" "clock"];
+          clock = {
+            format = "{:%H:%M}";
+            tooltip-format = "{:%Y-%m-%d}";
+          };
+          network = {
+            format-wifi = "   ";
+            format-ethernet = "";
+            tooltip-format-wifi = "{essid}";
+          };
+          battery = {
+            full-at = 95;
+            states = {
+              warning = 30;
+              critical = 15;
+            };
+
+            format-charging = "   ";
+            format-full = "";
+          };
           mpris = {
             format = "{artist} - {title}";
           };
           pulseaudio = {
             on-click = "pavucontrol";
+          };
+          tray = {
+            spacing = 10;
           };
           "hyprland/workspaces" = {
             all-outputs = true;
@@ -40,75 +61,93 @@ in
 
       style =
         let
+        scale = 1;
+        font-size = toString (10*scale);
+        margin = toString (1);
         clockColor = "@text";
       makeBorder = color: "border-bottom: 3px solid ${color};";
       makeInfo = color: ''
         color: ${color};
       ${makeBorder color};
       '';
-      in
+      in /* css */
         ''
         * {
-border: none;
-        border-radius: 0;
-        font-family: Source Code Pro;
+          margin: 0px;
+          padding: 0px;
+          border: none;
+          border-radius: 0;
+          font-family: Source Code Pro;
+          font-size: ${font-size}px;
         }
-      window#waybar {
-        background-color: @crust;
-      }
-#clock,
-#pulseaudio {
-margin: 0px;
-        padding-top: 1px;
-        padding-bottom: 1px;
-        padding-left: 6px;
-        padding-right: 6px;
-        background-color: @base;
-        margin-top: 4px;
-        margin-bottom: 4px;
-        border-radius: 20px 0px 0px 20px;
-}
-#workspaces {
-  background-color: @base;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  border-radius: 20px;
-}
-#workspaces button {
-color: @text;
-}
-#workspaces button.empty {
-color: @overlay1;
-}
-#workspaces button.visible {
-color: @teal;
-}
-#workspaces button.hosting-monitor {
-color: @green;
-}
-#pulseaudio {
-  padding-left: 12px;
-}
-#mpris {
-color: @text;
-       background-color: @base;
-       margin-top: 4px;
-       margin-bottom: 4px;
-       padding-left: 12px;
-       padding-right: 12px;
-       border-radius: 20px;
-       margin-left: 8px;
-}
-#clock {
-color: @text;
-       border-radius: 0px 20px 20px 0px;
-       padding-right: 12px;
-       margin-right: 8px;
-}
-'';
 
-};
-};
+        window#waybar {
+          background-color: @base;
+        }
+
+        #network
+        #clock,
+        #pulseaudio {
+          margin: 0px;
+          padding-top: 0.5px;
+          padding-bottom: 0.5px;
+          padding-left: 6px;
+          padding-right: 6px;
+          background-color: @base;
+          margin-top: ${margin}px;
+          border-radius: 1px 0px 0px 1px;
+        }
+
+        #workspaces {
+          background-color: @base;
+          padding-top: 0px;
+          padding-bottom: 0.5px;
+          margin-top: ${margin}px;
+          border-radius: 3px;
+        }
+
+        #workspaces button {
+          color: @text;
+        }
+        #workspaces button.empty {
+          color: @overlay1;
+        }
+        #workspaces button.visible {
+          color: @teal;
+        }
+        #workspaces button.hosting-monitor {
+          color: @green;
+        }
+
+        #battery.critical {
+          color: @red;
+        }
+
+        #battery.warning {
+          color: @yellow;
+        }
+
+        #pulseaudio {
+          padding-left: 12px;
+        }
+
+        #mpris {
+          color: @text;
+          background-color: @base;
+          margin-top: 1px;
+          padding-left: 12px;
+          padding-right: 12px;
+          border-radius: 20px;
+          margin-left: 8px;
+        }
+
+        #clock {
+          color: @text;
+          border-radius: 0px 20px 20px 0px;
+          padding-right: 12px;
+          margin-right: 8px;
+        }
+      '';
+    };
+  };
 }

@@ -56,7 +56,7 @@ in
         exec-once = [
           "[workspace 1 silent] firefox"
             "waybar"
-            "[workspace 9 silent] discord"
+            #"[workspace 9 silent] discord"
             "[workspace 8 silent] spotify"
             "lxqt-policykit-agent"
         ];
