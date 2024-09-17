@@ -32,7 +32,17 @@ in
             "$mod, J, movefocus, d"
             "$mod, K, movefocus, u"
             "$mod, L, movefocus, r"
+
             '',Print, exec, grim -g "$(slurp)"''
+
+            ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"
+            ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
+            ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+            ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+            ", XF86MonBrightnessUp, exec, brightnessctl s 10%+"
+            ", XF86AudioPlay, exec, playerctl play-pause"
+            ", XF86AudioPrev, exec, playerctl previous"
+            ", XF86AudioNext, exec, playerctl next"
             ]
             );
 
