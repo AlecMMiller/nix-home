@@ -66,7 +66,7 @@ in
         exec-once = [
           "[workspace 1 silent] firefox"
             "waybar"
-            #"[workspace 9 silent] discord"
+            "[workspace 9 silent] discord"
             "[workspace 8 silent] spotify"
             "lxqt-policykit-agent"
         ];
@@ -89,6 +89,8 @@ in
         windowrulev2 = [
           "suppressevent maximize, class:.*"
             "float,class:^(org.pulseaudio.pavucontrol)$"
+            "workspace 9 silent,class:^(discord)$"
+            "workspace 4,class:^(cortex)$"
         ];
 
         "$mod" = "SUPER";
