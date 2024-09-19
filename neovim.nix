@@ -7,6 +7,7 @@
     extraConfig = /* lua */''
       let mapleader = ' '
       set number relativenumber
+      set clipboard+=unnamedplus
       hi Normal ctermbg=None
       hi Normal guibg=None
       '';

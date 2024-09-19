@@ -53,6 +53,7 @@ in
         fira-code
         fira-code-symbols
         grim
+        wl-clipboard
         slurp
         (nerdfonts.override { fonts = [ "FiraCode" ]; })
     ] ++ lib.optionals config.bundles.desktop [ 
