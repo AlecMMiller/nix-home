@@ -33,6 +33,7 @@ in
 
             format-charging = "   ";
             format-full = "";
+            format-plugged = "";
           };
           mpris = {
             format = "{artist} - {title}";
@@ -115,7 +116,7 @@ in
         #workspaces button.visible {
           color: @teal;
         }
-        #workspaces button.hosting-monitor {
+        #workspaces button.hosting-monitor button.visible {
           color: @green;
         }
 

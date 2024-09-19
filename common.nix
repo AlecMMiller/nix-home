@@ -7,7 +7,6 @@ in
     (sources.catppuccin + "/modules/home-manager")
   ];
 
-
   config = {
     nixpkgs = {
       config = {
@@ -62,6 +61,8 @@ in
     jdk8
     virt-manager
     ];
+
+    programs.fd.enable = true;
 
     fonts.fontconfig.enable = true;
 
