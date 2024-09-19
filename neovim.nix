@@ -56,11 +56,13 @@
 
           telescope.setup {
             defaults = {
-              file_ignore_patterns = {
-                "node_modules",
-                "target"
-              }
-            }
+              
+            },
+            pickers = {
+              find_files = {
+                find_command = { "fd", "--hidden", "-E", ".git" },
+              },
+            },
           }
           vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
           vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
