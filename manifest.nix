@@ -29,7 +29,7 @@ with lib;
     ./hyprpaper.nix
     ./kitty.nix
     ./mako.nix
-    ./neovim.nix
+    ./nixvim.nix
     ./ripgrep.nix
     ./starship.nix
     ./tmux.nix
