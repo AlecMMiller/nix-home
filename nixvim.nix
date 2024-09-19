@@ -91,7 +91,16 @@
           };
         };
       };
+      fidget = {
+        enable = true;
+      };
       harpoon = {
+        enable = true;
+      };
+      illuminate = {
+        enable = true;
+      };
+      indent-blankline = {
         enable = true;
       };
       lint = {
@@ -108,6 +117,12 @@
           };
           ts-ls.enable = true;
         };
+      };
+      luasnip = {
+        enable = true;
+      };
+      navic = {
+        enable = true;
       };
       nvim-autopairs = {
         enable = true;
