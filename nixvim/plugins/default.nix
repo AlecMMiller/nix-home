@@ -39,6 +39,9 @@
         ];
       };
     };
+    oil = {
+      enable = true;
+    };
     ts-autotag = {
       enable = true;
     };
