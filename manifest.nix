@@ -16,6 +16,7 @@ with lib;
   imports = [
     ./common.nix
     ./direnv.nix
+    ./de
     ./eza.nix
     ./fcitx5.nix
     ./firefox.nix
@@ -23,17 +24,11 @@ with lib;
     ./fzf.nix
     ./git.nix
     ./gtk.nix
-    ./hypridle.nix
-    ./hyprland.nix
-    ./hyprlock.nix
-    ./hyprpaper.nix
     ./kitty.nix
     ./mako.nix
     ./nixvim
     ./ripgrep.nix
     ./starship.nix
     ./tmux.nix
-    ./tofi.nix
-    ./waybar.nix
   ];
 }
