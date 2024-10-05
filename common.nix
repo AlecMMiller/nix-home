@@ -56,6 +56,7 @@ in
         noto-fonts-emoji
         fira-code
         fira-code-symbols
+        keepassxc
         grim
         wl-clipboard
         slurp
@@ -67,6 +68,10 @@ in
         jdk8
         virt-manager
       ];
+
+    home.sessionVariables = {
+      TSS2_LOG = "fapi+NONE";
+    };
 
     programs.fd.enable = true;
 
