@@ -47,6 +47,7 @@ in
         spotify
         discord
         blender
+        bitwarden-desktop
         nixfmt-rfc-style
         prettierd
         pavucontrol
