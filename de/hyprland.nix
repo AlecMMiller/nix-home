@@ -110,6 +110,7 @@ in
           "float,class:^(org.pulseaudio.pavucontrol)$"
           "workspace 9 silent,class:^(discord)$"
           "workspace 4 silent,class:^(cortex)$"
+          "tile,class:^(blender)$"
         ];
 
         "$mod" = "SUPER";
