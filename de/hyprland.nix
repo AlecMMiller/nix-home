@@ -105,6 +105,10 @@ in
           };
         };
 
+        dwindle = {
+          no_gaps_when_only = 1;
+        };
+
         windowrulev2 = [
           "suppressevent maximize, class:.*"
           "float,class:^(org.pulseaudio.pavucontrol)$"

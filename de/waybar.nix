@@ -85,12 +85,6 @@ in
           scale = 1;
           font-size = toString (10 * scale);
           margin = toString (1);
-          clockColor = "@text";
-          makeBorder = color: "border-bottom: 3px solid ${color};";
-          makeInfo = color: ''
-              color: ${color};
-            ${makeBorder color};
-          '';
         in
         # css
         ''
@@ -104,7 +98,7 @@ in
           }
 
           window#waybar {
-            background-color: @base;
+            background-color: @crust;
           }
 
           #battery,
@@ -115,17 +109,15 @@ in
             padding-top: 0.5px;
             padding-bottom: 0.5px;
             padding-right: 15px;
-            background-color: @base;
             margin-top: ${margin}px;
-            border-radius: 1px 0px 0px 1px;
+            background-color: @crust;
           }
 
           #workspaces {
-            background-color: @base;
             padding-top: 0px;
             padding-bottom: 0.5px;
             margin-top: ${margin}px;
-            border-radius: 3px;
+            background-color: @crust;
           }
 
           #workspaces button {
@@ -151,7 +143,6 @@ in
 
           #mpris {
             color: @text;
-            background-color: @base;
             margin-top: 1px;
             padding-left: 12px;
             padding-right: 12px;
@@ -160,8 +151,8 @@ in
           }
 
           #clock {
+            background-color: @crust;
             color: @text;
-            border-radius: 0px 20px 20px 0px;
             padding-right: 12px;
             margin-right: 8px;
           }
