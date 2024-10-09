@@ -36,7 +36,7 @@
             inherit inputs outputs;
           };
           modules = [
-            /home/alec/.config/home-manager/home.nix
+            /home/alec/.config/home-manager/hosts/kami/home.nix
           ];
         };
         "alec@icarus" = home-manager.lib.homeManagerConfiguration {
