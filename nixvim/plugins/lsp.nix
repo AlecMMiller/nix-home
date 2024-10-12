@@ -4,8 +4,8 @@
   programs.nixvim.plugins.lsp = {
     enable = true;
     servers = {
-      nil-ls.enable = true;
-      ts-ls.enable = true;
+      nil_ls.enable = true;
+      ts_ls.enable = true;
     };
   };
 }
