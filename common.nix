@@ -46,7 +46,9 @@ in
         usbutils
         spotify
         discord
-        blender
+        (blender.override {
+          cudaSupport = config.bundles.desktop;
+        })
         bitwarden-desktop
         nixfmt-rfc-style
         prettierd
