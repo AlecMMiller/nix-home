@@ -42,10 +42,16 @@
     oil = {
       enable = true;
     };
+    rustaceanvim = {
+      enable = true;
+    };
     ts-autotag = {
       enable = true;
     };
     undotree = {
+      enable = true;
+    };
+    web-devicons = {
       enable = true;
     };
   };
