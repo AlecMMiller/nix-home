@@ -30,5 +30,6 @@ with lib;
     ./ripgrep.nix
     ./starship.nix
     ./tmux.nix
+    ./xdg.nix
   ];
 }
