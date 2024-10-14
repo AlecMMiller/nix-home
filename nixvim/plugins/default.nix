@@ -40,6 +40,9 @@
     navic = {
       enable = true;
     };
+    neogit = {
+      enable = true;
+    };
     nvim-autopairs = {
       enable = true;
       settings = {
