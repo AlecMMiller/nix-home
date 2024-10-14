@@ -58,6 +58,9 @@
     ts-autotag = {
       enable = true;
     };
+    typst-vim = {
+      enable = true;
+    };
     undotree = {
       enable = true;
     };
