@@ -44,6 +44,7 @@ in
         nixd
         vscode-langservers-extracted
         usbutils
+        google-chrome
         spotify
         discord
         (blender.override {
