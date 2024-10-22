@@ -9,7 +9,13 @@
     colorschemes.catppuccin = {
       enable = true;
       settings = {
-        #transparent_background = true;
+        autoindent = true;
+        smartindent = true;
+        breakindent = true;
+        incsearch = true;
+        hlsearch = true;
+        signcolumn = "yes";
+        scrolloff = 8;
       };
     };
 
