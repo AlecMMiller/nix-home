@@ -34,6 +34,9 @@
     lint = {
       enable = true;
     };
+    lsp-signature = {
+      enable = true;
+    };
     luasnip = {
       enable = true;
     };
@@ -42,6 +45,12 @@
     };
     neogit = {
       enable = true;
+    };
+    neotest = {
+      enable = true;
+      adapters = {
+        jest.enable = true;
+      };
     };
     nvim-autopairs = {
       enable = true;
