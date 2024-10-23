@@ -9,7 +9,13 @@
     ./treesitter.nix
   ];
   programs.nixvim.plugins = {
+    cmp_luasnip = {
+      enable = true;
+    };
     fidget = {
+      enable = true;
+    };
+    friendly-snippets = {
       enable = true;
     };
     harpoon = {
@@ -39,6 +45,9 @@
     };
     luasnip = {
       enable = true;
+      fromVscode = [
+        { }
+      ];
     };
     navic = {
       enable = true;

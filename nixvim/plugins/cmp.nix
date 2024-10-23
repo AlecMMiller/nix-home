@@ -22,7 +22,20 @@
           name = "path";
           keywordLength = 3;
         }
+        {
+          name = "luasnip";
+          keywordLength = 3;
+        }
+        {
+          name = "cmp_luasnip";
+        }
       ];
+      snippet.expand = # lua
+        ''
+          function(args)
+            require("luasnip").lsp_expand(args.body)
+          end
+        '';
       view = {
         docs = {
           auto_open = true;
