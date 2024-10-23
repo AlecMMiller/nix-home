@@ -57,7 +57,7 @@ in
         rustfmt
         playerctl
         noto-fonts
-        noto-fonts-cjk
+        noto-fonts-cjk-sans
         noto-fonts-emoji
         fira-code
         fira-code-symbols
@@ -65,6 +65,7 @@ in
         grim
         wl-clipboard
         slurp
+        vscode
         (nerdfonts.override { fonts = [ "FiraCode" ]; })
       ]
       ++ lib.optionals config.bundles.desktop [
