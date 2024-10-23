@@ -73,6 +73,7 @@ in
         prismlauncher
         jdk8
         virt-manager
+        ollama
       ];
 
     home.sessionVariables = {
