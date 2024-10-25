@@ -50,7 +50,7 @@ in
             "$mod, K, movefocus, u"
             "$mod, L, movefocus, r"
 
-            '',Print, exec, grim -g "$(slurp)"''
+            '',Print, exec, grim -g "$(slurp)" $HOME/screenshots/$(date +'%s_grim.png')''
 
             ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"
             ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
