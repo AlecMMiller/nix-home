@@ -59,6 +59,7 @@
       enable = true;
       adapters = {
         jest.enable = true;
+        rust.enable = true;
       };
     };
     nvim-autopairs = {
