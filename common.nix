@@ -71,6 +71,7 @@ in
       ++ lib.optionals config.bundles.desktop [
         davinci-resolve
         prismlauncher
+        fspy
         jdk8
         virt-manager
         ollama
