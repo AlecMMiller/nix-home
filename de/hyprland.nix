@@ -92,10 +92,6 @@ in
 
         decoration = {
           rounding = 2;
-          drop_shadow = true;
-          shadow_range = 4;
-          shadow_render_power = 3;
-
           blur = {
             enabled = true;
             size = 8;
@@ -103,10 +99,6 @@ in
 
             vibrancy = 0.1696;
           };
-        };
-
-        dwindle = {
-          no_gaps_when_only = 1;
         };
 
         windowrulev2 = [
