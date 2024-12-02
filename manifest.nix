@@ -18,6 +18,7 @@ with lib;
     ./direnv.nix
     ./de
     ./eza.nix
+    ./fcitx5.nix
     ./firefox.nix
     ./fish.nix
     ./fzf.nix

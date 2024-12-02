@@ -66,7 +66,7 @@ in
         wl-clipboard
         slurp
         vscode
-        (nerdfonts.override { fonts = [ "FiraCode" ]; })
+        nerd-fonts.fira-code
       ]
       ++ lib.optionals config.bundles.desktop [
         davinci-resolve
