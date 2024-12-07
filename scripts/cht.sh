@@ -9,7 +9,7 @@ read -p "query: " query
 echo $selected
 
 if printf "$languages" | grep -qs $selected; then
-  tmux neww bash -c "curl cht.sh/$selected/`echo $query | tr ' ' '+'` & while [ : ]; do sleep 1; done"
+  tmux neww -n "$selected: $query" bash -c "curl cht.sh/$selected/`echo $query | tr ' ' '+'` & while [ : ]; do sleep 1; done"
 else
-  tmux neww bash -c "curl cht.sh/$selected~$query & while [ : ]; do sleep 1; done"
+  tmux neww -n $selected bash -c "curl cht.sh/$selected~$query & while [ : ]; do sleep 1; done"
 fi
