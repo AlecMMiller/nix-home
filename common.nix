@@ -82,8 +82,11 @@ in
     };
 
     programs.fd.enable = true;
+    programs.k9s.enable = true;
 
-    fonts.fontconfig.enable = true;
+    fonts = {
+      fontconfig.enable = true;
+    };
 
     xdg.enable = true;
 
@@ -104,6 +107,15 @@ in
           trim_trailing_whitespace = false;
         };
       };
+    };
+
+    home.file.".scripts/cht.sh" = {
+      source = ./scripts/cht.sh;
+    };
+
+    home.file.".scripts/sessionizer.sh" = {
+      executable = true;
+      source = ./scripts/sessionizer.sh;
     };
 
     # Let Home Manager install and manage itself.
