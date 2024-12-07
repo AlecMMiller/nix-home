@@ -49,6 +49,7 @@ in
             "$mod, J, movefocus, d"
             "$mod, K, movefocus, u"
             "$mod, L, movefocus, r"
+            "$mod, F, fullscreen"
 
             '',Print, exec, grim -g "$(slurp)" $HOME/screenshots/$(date +'%s_grim.png')''
 
@@ -89,6 +90,8 @@ in
           "[workspace 8 silent] spotify"
           "lxqt-policykit-agent"
         ];
+
+        animations.enabled = 0;
 
         decoration = {
           rounding = 2;
