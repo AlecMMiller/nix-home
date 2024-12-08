@@ -7,6 +7,9 @@ with lib;
       userEmail = "alecmichaelmiller@gmail.com";
       userName = "Alec Miller";
       extraConfig = {
+        init = {
+          defaultBranch = "main";
+        };
         push = {
           autoSetupRemote = true;
         };
