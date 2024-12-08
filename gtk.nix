@@ -1,8 +1,8 @@
-{ ... }:
+{ config, ... }:
 
 {
   gtk = {
-    enable = true;
+    enable = config.bundles.gui;
     catppuccin.enable = true;
   };
 }

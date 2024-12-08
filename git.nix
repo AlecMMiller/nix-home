@@ -1,21 +1,23 @@
-{ ... }:
-
+{ config, lib, ... }:
+with lib;
 {
-  programs.git = {
-    enable = true;
-    userEmail = "alecmichaelmiller@gmail.com";
-    userName = "Alec Miller";
-    extraConfig = {
-      push = {
-        autoSetupRemote = true;
+  config = {
+    programs.git = mkIf config.bundles.gui {
+      enable = true;
+      userEmail = "alecmichaelmiller@gmail.com";
+      userName = "Alec Miller";
+      extraConfig = {
+        push = {
+          autoSetupRemote = true;
+        };
+        pull = {
+          rebase = false;
+        };
       };
-      pull = {
-        rebase = false;
+      signing = {
+        key = "alecmichaelmiller@gmail.com";
+        signByDefault = true;
       };
-    };
-    signing = {
-      key = "alecmichaelmiller@gmail.com";
-      signByDefault = true;
     };
   };
 }

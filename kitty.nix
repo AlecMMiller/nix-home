@@ -1,15 +1,13 @@
-{ ... }:
+{ config, ... }:
 
 {
   programs.kitty = {
-    enable = true;
+    enable = config.bundles.gui;
     shellIntegration = {
       enableFishIntegration = true;
     };
     settings = {
       window_margin_width = 2;
-      #background_opacity = "0.85";
-      #dynamic_background_opacity = true;
     };
   };
 }

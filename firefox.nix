@@ -1,12 +1,17 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  config,
+  ...
+}:
 {
   programs.firefox = {
-    enable = true;
+    enable = config.bundles.gui;
     profiles.default = {
       id = 0;
       name = "Alec";
       extensions = with inputs.firefox-addons.packages.${pkgs.system}; [ ublock-origin ];
-      bookmarks = {};
+      bookmarks = { };
       settings = {
         "browser.startup.homepage" = "about:home";
         "browser.download.panel.shown" = true;

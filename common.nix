@@ -25,7 +25,7 @@ in
     home.username = "alec";
     home.homeDirectory = "/home/alec";
     targets.genericLinux.enable = true;
-    services.kdeconnect.enable = true;
+    services.kdeconnect.enable = config.bundles.gui;
 
     # This value determines the Home Manager release that your configuration is
     # compatible with. This helps avoid breakage when a new Home Manager release
@@ -41,32 +41,35 @@ in
     home.packages =
       with pkgs;
       [
+        btop
         nixd
         vscode-langservers-extracted
-        usbutils
-        google-chrome
-        spotify
-        discord
-        (blender.override {
-          cudaSupport = config.bundles.desktop;
-        })
-        bitwarden-desktop
         nixfmt-rfc-style
         prettierd
-        pavucontrol
         rustfmt
-        playerctl
         noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-emoji
         fira-code
         fira-code-symbols
-        keepassxc
-        grim
-        wl-clipboard
-        slurp
-        vscode
         nerd-fonts.fira-code
+      ]
+      ++ lib.optionals config.bundles.gui [
+        usbutils
+        grim
+        bitwarden-desktop
+        keepassxc
+        slurp
+        wl-clipboard
+        pavucontrol
+        google-chrome
+        spotify
+        discord
+        vscode
+        playerctl
+        (blender.override {
+          cudaSupport = config.bundles.desktop;
+        })
       ]
       ++ lib.optionals config.bundles.desktop [
         davinci-resolve
@@ -81,14 +84,26 @@ in
       TSS2_LOG = "fapi+NONE";
     };
 
-    programs.fd.enable = true;
+    programs.fd.enable = config.bundles.gui;
     programs.k9s.enable = true;
+
+    programs.bat = {
+      enable = true;
+    };
+
+    programs.zoxide = {
+      enable = true;
+      enableFishIntegration = true;
+      options = [
+        "--cmd cd"
+      ];
+    };
 
     fonts = {
       fontconfig.enable = true;
     };
 
-    xdg.enable = true;
+    xdg.enable = config.bundles.gui;
 
     #home-manager.enable = true;
     catppuccin.flavor = "mocha";

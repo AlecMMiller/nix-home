@@ -11,6 +11,11 @@ with lib;
       type = types.bool;
       default = false;
     };
+
+    gui = mkOption {
+      type = types.bool;
+      default = true;
+    };
   };
 
   imports = [

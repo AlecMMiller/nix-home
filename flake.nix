@@ -48,6 +48,15 @@
             /home/alec/.config/home-manager/hosts/icarus/home.nix
           ];
         };
+        "work" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
+          modules = [
+            /home/alec/hosts/work/home.nix
+          ];
+        };
       };
     };
 }

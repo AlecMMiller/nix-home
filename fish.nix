@@ -6,7 +6,9 @@
     shellAliases = {
       "nix-re" = "sudo nixos-rebuild switch";
       "home-re" = "home-manager switch --impure";
-      ls = "eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions";
+      ls = "eza";
+      cat = "bat";
+      open = "xdg-open";
     };
     interactiveShellInit = ''
       fish_vi_key_bindings
