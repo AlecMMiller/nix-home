@@ -54,6 +54,7 @@ in
         fira-code
         fira-code-symbols
         nerd-fonts.fira-code
+        fd
       ]
       ++ lib.optionals config.bundles.gui [
         usbutils
