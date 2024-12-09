@@ -6,8 +6,8 @@
   ...
 }:
 let
-  userInfo = import ./user.nix { };
   sources = import ./npins;
+  username = "alec";
 in
 {
   imports = [
@@ -23,8 +23,8 @@ in
       };
     };
 
-    home.username = userInfo.user;
-    home.homeDirectory = "/home/" + userInfo.user;
+    home.username = username;
+    home.homeDirectory = "/home/" + username;
     targets.genericLinux.enable = true;
     services.kdeconnect.enable = config.bundles.gui;
 
