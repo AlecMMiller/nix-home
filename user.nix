@@ -1,1 +1,1 @@
-/home/alec/.config/user.nix
+../user.nix
