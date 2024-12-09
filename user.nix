@@ -1,1 +1,1 @@
-../user.nix
+~/.config/user.nix
