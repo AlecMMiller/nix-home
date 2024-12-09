@@ -18,6 +18,12 @@
     friendly-snippets = {
       enable = true;
     };
+    git-worktree = {
+      enable = true;
+      enableTelescope = true;
+      updateOnChangeCommand = # lua
+        '''';
+    };
     harpoon = {
       enable = true;
       keymaps = {

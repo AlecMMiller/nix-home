@@ -9,6 +9,7 @@
       ls = "eza";
       cat = "bat";
       open = "xdg-open";
+      nw = "tmux neww bash -c $argv";
     };
     interactiveShellInit = ''
       fish_vi_key_bindings

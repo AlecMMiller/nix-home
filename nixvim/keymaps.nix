@@ -35,5 +35,13 @@
       key = "<leader>dd";
       action = "<cmd>lua vim.diagnostic.open_float()<CR>";
     }
+    {
+      key = "<leader>fw";
+      action.__raw = ''function() require("telescope").extensions.git_worktree.git_worktrees() end'';
+    }
+    {
+      key = "<leader>wa";
+      action.__raw = ''function() require("telescope").extensions.git_worktree.create_git_worktree() end'';
+    }
   ];
 }
