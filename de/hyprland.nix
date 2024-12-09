@@ -17,7 +17,7 @@ in
 {
   config = {
     wayland.windowManager.hyprland = {
-      enable = true;
+      enable = config.bundles.gui;
       settings = {
         "$terminal" = "kitty";
         "$launcher" = "tofi-drun | xargs hyprctl dispatch exec --";
