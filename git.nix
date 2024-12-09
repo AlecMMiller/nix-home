@@ -1,10 +1,13 @@
 { config, lib, ... }:
+let
+  userInfo = import ./user.nix { };
+in
 with lib;
 {
   config = {
     programs.git = mkIf config.bundles.gui {
       enable = true;
-      userEmail = "alecmichaelmiller@gmail.com";
+      userEmail = userInfo.email;
       userName = "Alec Miller";
       extraConfig = {
         init = {
@@ -18,8 +21,8 @@ with lib;
         };
       };
       signing = {
-        key = "alecmichaelmiller@gmail.com";
-        signByDefault = true;
+        key = userInfo.email;
+        signByDefault = config.bundles.gui;
       };
     };
   };
