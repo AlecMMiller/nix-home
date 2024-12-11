@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ./plugins
@@ -10,6 +10,7 @@
       enable = true;
       settings = {
         autoindent = true;
+        autoread = true;
         smartindent = true;
         breakindent = true;
         incsearch = true;
@@ -28,6 +29,8 @@
       number = true;
       relativenumber = true;
     };
+
+    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
 
   };
 }

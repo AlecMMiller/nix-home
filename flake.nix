@@ -11,6 +11,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
     nixvim = {
       url = "github:nix-community/nixvim";
       # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
@@ -26,6 +28,9 @@
       ...
     }@inputs:
     let
+      overlays = [
+        inputs.neovim-nightly-overlay.overlays.default
+      ];
       inherit (self) outputs;
     in
     {

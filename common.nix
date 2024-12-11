@@ -21,6 +21,9 @@ in
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
       };
+      overlays = [
+        inputs.neovim-nightly-overlay.overlays.default
+      ];
     };
 
     home.username = username;
