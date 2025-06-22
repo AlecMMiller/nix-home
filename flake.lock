@@ -8,11 +8,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1750478603,
-        "narHash": "sha256-W+PwT19YbzRH8YawEeV3jBb5dp8CbfwWZ4uFQkGwZbA=",
+        "lastModified": 1750565010,
+        "narHash": "sha256-eetTl1TpPoD5W52RX02Lo8SLQdVcU2m7usCSh5VhnwE=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "26d54102450b4e23d56d4319ef0722f155b5b37c",
+        "rev": "a24c53d008d362cfd5a96270b2bb331e26902af5",
         "type": "gitlab"
       },
       "original": {
@@ -258,11 +258,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1750397423,
-        "narHash": "sha256-my7Q4vayOta1b51nrdZV/7kXt8MJx/YNf9XFSObKSQs=",
+        "lastModified": 1750497580,
+        "narHash": "sha256-8XBME7+ErfNXJdz+q1T2+L87QS/tqfFvfreN0ynWp8s=",
         "owner": "nix-community",
         "repo": "neovim-nightly-overlay",
-        "rev": "39b1e9f2bef00dc3bc0291162dc8dd4b80a68d38",
+        "rev": "39763127ad62f962411336d9c7db62efc9f6ec67",
         "type": "github"
       },
       "original": {
@@ -274,11 +274,11 @@
     "neovim-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1750374481,
-        "narHash": "sha256-Z0KWAvQ0TN1Pdhp0ZkynJpIrLzs8uF8vGIFffKh9DmA=",
+        "lastModified": 1750433527,
+        "narHash": "sha256-p39wAp30YEmn9uKGxht08pvJG4SIofEFNzpzWdFyeKA=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "927dc3c2c49faeb8be94097d5faa0322928059b1",
+        "rev": "d0aedd36dfe0ac4ed45ea93f471379c77f0c7905",
         "type": "github"
       },
       "original": {
